@@ -12,6 +12,7 @@ metadata:
 data:
   healthz-port: {{ .Values.controller.healthzPort | quote }}
   stats-port: {{ .Values.controller.stats.port | quote }}
+  "9042": "thingsboard/thingsboard-cassandra:9042"
 {{- if .Values.controller.logs.enabled }}
   syslog-endpoint: "localhost:514"
 {{- end }}
